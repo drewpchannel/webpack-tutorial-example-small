@@ -44,20 +44,21 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
-
-
-/***/ },
-/* 1 */,
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
+	var angular = __webpack_require__(1);
+	angular.module('dashboard', []);
 
 	__webpack_require__(3);
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(2);
 	module.exports = angular;
 
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports) {
 
 	/**
@@ -31828,6 +31829,25 @@
 	})(window);
 
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var angular = __webpack_require__(1);
+
+	angular.module('dashboard')
+	  .controller('dashboardController', __webpack_require__(4));
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	function DashboardController($scope) {
+	  $scope.name = 'hello';
+	}
+
+	module.exports = DashboardController;
 
 /***/ }
 /******/ ]);
